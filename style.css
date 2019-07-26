@@ -40,3 +40,25 @@ body {
 .mt-nav ul li a:hover{
     color: #3e99ff;
 }
+
+p{
+    margin-bottom: 20px;
+}
+
+h1, h2, h3, h4, h5, h6{
+    margin-bottom: 10px;
+}
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.mt-content{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.mt-article{
+    background: #fff;
+    padding: 30px;
+}
