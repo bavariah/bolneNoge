@@ -1,0 +1,42 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+body {
+    background: #eeeeee;
+}
+.mt-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: 'Open Sans', sans-serif;
+}
+.mt-header {
+    background: #fff;
+}
+.mt-header::after {
+    content:" ";
+    clear: both;
+    display:block;
+    visibility: none;
+}
+.mt-logo{
+    float: left;
+}
+.mt-nav {
+    float: right;
+}
+
+.mt-nav ul li{
+    display: inline-block;
+}
+.mt-nav ul li a{
+    line-height: 60px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #303030;
+}
+
+.mt-nav ul li a:hover{
+    color: #3e99ff;
+}
