@@ -1,83 +1,53 @@
-*{
-    margin:0;
-    padding: 0;
+* {
+    box-sizing: border-box;
 }
-
 html, body {
+    margin:0px;
+    padding:0px;
     height: 100%;
+    background: #eeeeee;
+    font-family: 'Lora', serif;
+}
+header {
     background: #0b8d41;
-    
+    height: 66px;
 }
-.mt-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    font-family: 'Open Sans', sans-serif;
+header * {
+    color: white;
 }
-.mt-header {
-    background: #fff;
+header .logo {
+    float:left;
+    height: inherit;
+    margin-left: 2em;
 }
-.mt-header::after {
-    content:" ";
-    clear: both;
-    display:block;
-    visibility: none;
+header .logo-text {
+    margin: 9px;
+    font-family: 'Candal', serif;
 }
-.mt-logo{
-    float: left;
+header .logo-text span {
+    color: #1fee75;
 }
-.mt-nav {
+header ul {
     float: right;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;}
+header ul li {
+    float: left;
+    position: relative;
 }
-
-.mt-nav ul li{
-    display: inline-block;
-}
-.mt-nav ul li a{
-    line-height: 60px;
-    padding: 10px 20px;
-    text-decoration: none;
-    color: #303030;
-}
-
-.mt-nav ul li a:hover{
-    color: #0b8d41;
-}
-
-p{
-    margin-bottom: 20px;
-}
-
-h1, h2, h3, h4, h5, h6{
-    margin-bottom: 10px;
-}
-img {
+header ul li a {
     display: block;
-    max-width: 100%;
+    padding: 21px;
+    font-size: 1.1em;
+    text-decoration: none;
 }
-
-.mt-content{
-    min-height: 100%;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    max-width: 70%;
-    float: left;
+header ul li a:hover {
+    background: #06662e;
+    transition: 0.5s;
 }
-.mt-sidebar{
-    max-width: 25%;
-    float: right;
-    width: 25%;
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
-
-.mt-sidebar div{
-    background: #fff;
-    padding: 30px;
-}
-
-.mt-article{
-    background: #fff;
-    padding: 30px;
+header .menu-toggle {
+    display: none;
 }
 .mt-footer {
     background: #303036;
@@ -111,9 +81,15 @@ img {
     left: 0px;
     padding-top: 20px; 
 }
-.clearfix::after {
-    content:" ";
-    clear: both;
-    display:block;
-    visibility: none;
+/* medio queries */
+
+@media only screen and (max-width: 750px) {
+    header ul {
+        width: 100%;
+        background: #10a850;
+    }
+    header ul li {
+        width: 100%;
+
+    }
 }
