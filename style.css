@@ -157,6 +157,16 @@ header .menu-toggle {
     width: 70%;
     float: left;
 }
+.content .main-content.single {
+    background: white;
+    padding: 20px 50px;
+    font-size: 1.1em;
+    border-radius: 5px;
+}
+.content .main-content.single .post-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
 .content .main-content .post {
     width: 95%;
     height: 270px;
@@ -164,6 +174,17 @@ header .menu-toggle {
     border-radius: 5px;
     background: white;
     position: relative;
+}
+.content .popular .post {
+    border-top: 1px solid #e0e0e0;
+    margin-top: 10px;
+    padding-top: 10px;
+}
+.content .popular .post img {
+    height: 60px;
+    width: 75px;
+    float: left;
+    margin-right: 10px;
 }
 .content .main-content .post .read-more {
     position: absolute;
@@ -196,7 +217,9 @@ header .menu-toggle {
 .content .sidebar {
     width: 30%;
     float: left;
-    height: 300px;
+}
+.content .sidebar.single {
+    padding: 0px 10px;
 }
 .content .sidebar .section {
     background: white;
@@ -296,6 +319,7 @@ header .menu-toggle {
     float: right;
     font-size: 1.1em;
     font-family: 'Lora', serif;
+    cursor: pointer;
 }
 .footer .footer-bottom {
     background: #343a40;
@@ -309,7 +333,25 @@ header .menu-toggle {
     padding-top: 20px;
 }
 /* medio queries */
-
+@media only screen and (max-width: 934px) {
+    .content {
+        width: 100%;   
+    }
+    .content .main-content {
+        width: 100%;
+        padding: 10px;
+    }
+    .content .main-content .post {
+        width: 100%;
+    }
+    .content .sidebar {
+        width: 100%;
+        padding: 10px;
+    }
+    .content .slidebar .section.search {
+        margin-top: 30px;
+    }
+}
 @media only screen and (max-width: 750px) {
     header {
         position: relative;
