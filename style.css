@@ -33,6 +33,19 @@ a {
     color: white !important;
     background: #06662e;
 }
+.text-input {
+    padding: .7rem 1rem;
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #e0e0e0;
+    outline: none;
+    color: #444;
+    line-height: 1.5rem;
+    font-size: 1.2em;
+    font-family: 'Lora', serif;
+}
+/* NAVBAR */
 header {
     background: #0b8d41;
     height: 66px;
@@ -90,7 +103,7 @@ header .menu-toggle {
     position: absolute;
     top: 50%;
     right: 30px;
-    font-size: 2em;
+    font-size: 1.7em;
     color: #06662e;
     cursor: pointer;
 }
@@ -98,7 +111,7 @@ header .menu-toggle {
     position: absolute;
     top: 50%;
     left: 30px;
-    font-size: 2em;
+    font-size: 1.7em;
     color: #06662e;
     cursor: pointer;
 }
@@ -171,16 +184,42 @@ header .menu-toggle {
     float: right;
 }
 .content .main-content .recent-post-title {
-    margin: 20px;
+    margin: 25px;
 }
+/*sidebar*/
 .content .sidebar {
     width: 30%;
     float: left;
     height: 300px;
-    border: 1px solid #06662e;
 }
-
-
+.content .sidebar .section {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.content .sidebar .section-title {
+    margin: 10px 0px 10px 0px;
+}
+.content .sidebar .section.search {
+    margin-top: 90px;
+}
+.content .sidebar .section.topics ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    border-top: 1px solid #e0e0e0;
+}
+.content .sidebar .section.topics ul li a {
+    padding: 15px 0px 15px 0px;
+    display: block;
+    border-bottom: 1px solid #e0e0e0;
+    transition: all 0.3s;
+}
+.content .sidebar .section.topics ul li a:hover {
+    padding-left: 10px;
+    transition: all 0.3s;
+}
 /* medio queries */
 
 @media only screen and (max-width: 750px) {
