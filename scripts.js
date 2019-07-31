@@ -12,7 +12,7 @@ $(document).ready(function(){
         prevArrow: $('.prev'),
         responsive: [
             {
-                breakpoint: 1024,
+                breakpoint: 1150,
                 settings: {
                   slidesToShow: 3,
                   slidesToScroll: 3,
@@ -21,14 +21,14 @@ $(document).ready(function(){
                 }
               },
             {
-              breakpoint: 750,
+              breakpoint: 820,
               settings: {
                 slidesToShow: 2,
                 slidesToScroll: 2
               }
             },
             {
-              breakpoint: 440,
+              breakpoint: 510,
               settings: {
                 slidesToShow: 1,
                 slidesToScroll: 1
