@@ -412,4 +412,10 @@ header .menu-toggle {
         width: 100%;
         text-align: center;
     }
+    .post-slider .next {
+        right: 10px;  
+    }
+    .post-slider .prev {
+        left: 10px;  
+    }
 }
