@@ -371,6 +371,9 @@ header .menu-toggle {
     header {
         position: relative;
     }
+    .main-content-wrapper {
+        padding: 10px;
+    }
     header ul {
         width: 100%;
         background: #10a850;
@@ -413,9 +416,12 @@ header .menu-toggle {
         text-align: center;
     }
     .post-slider .next {
-        right: 10px;  
+        right: 5px;  
     }
     .post-slider .prev {
-        left: 10px;  
+        left: 5px;  
+    }
+    .content .main-content.single {
+        padding: 10px 20px;
     }
 }
