@@ -1,11 +1,13 @@
 * {
     box-sizing: border-box;
+    margin:0px;
+    padding:0px;
 }
 html, body {
     margin:0px;
     padding:0px;
     height: 100%;
-    background: #eeeeee;
+    background: #000000;
     font-family: 'Lora', serif;
     scroll-behavior: smooth;
 }
@@ -52,42 +54,94 @@ a {
 }
 /* NAVBAR */
 header {
-    background: #0b8d41;
-    height: 66px;
+    background: linear-gradient(to right, rgb(10, 226, 26), rgb(9, 113, 16));
+    height: 180px;
+    text-align: center;
+    z-index: 2;
+    position: relative;
 }
 header * {
     color: white;
 }
-header .logo {
-    float:left;
-    height: inherit;
-    margin-left: 2em;
-}
-header .logo-text {
-    margin: 9px;
-    font-family: 'Candal', serif;
-}
-header .logo-text span {
-    color: #1fee75;
-}
 header ul {
+    width: 70%;
     float: right;
-    margin: 0px;
-    padding: 0px;
-    list-style: none;}
+    list-style: none;
+}
 header ul li {
-    float: left;
+    float:left;
+    width: 200px;
+    height: 100px;
+    margin: 20px;
+    padding: 20px;
     position: relative;
 }
-header ul li a {
+header ul li ul{
+    margin-left: 20px; 
+    display: none;
+    position: absolute;
+}
+header ul li:hover ul {
     display: block;
-    padding: 21px;
-    font-size: 1.1em;
+}
+header ul li ul li {
+    background: white;
+    width: 100%;
+    height: 25px;
+    margin: 0px;
+    margin-top: 5px;
+    border-radius: 5px;
+    padding: 0px;
+    transition: all 0.5s;
+}
+header ul li ul li:last-child {
+    border-bottom: none;
+}
+header ul li ul li a {
+    text-align: left;
+    font-size: 1em;
+    color: #000000;
+    padding: 0px;
+    margin: 0px;
+    min-width:  140px;
+    transition: all 0.5s;
+}
+header ul li ul li a:hover {
+    color: white;
+    transition: all 0.5s;
+}
+header ul li ul li:hover {
+    background: #06662e;
+    transition: all 0.3s;
+}
+
+header .fa-address-card {
+    margin-right: 7px;
+}
+header .logo {
+    float: left;
+    width: 20%;
+    height: inherit;
+    display: block;
+    box-shadow: inset 0 0 10px #000000;
+    background: #059e05;
+}
+header .logo span {
+    color: #cfcfcf;
+    font-size: 1.8em;
+    text-align: center;
+    padding: 25px;
+}
+header ul li a {
+    padding: 20px;
+    display: block;
+    font-size: 1.2em;
     text-decoration: none;
 }
 header ul li a:hover {
-    background: #06662e;
+    color: #000000;
     transition: 0.5s;
+    border-radius: 3px;
 }
 header .menu-toggle {
     display: none;
@@ -336,6 +390,55 @@ header .menu-toggle {
     padding-top: 20px;
 }
 /* medio queries */
+@media only screen and (max-width: 1400px) {
+    header ul {
+        width: 80%;
+    }
+}
+@media only screen and (max-width: 1300px) {
+    header {
+        height: 100px;
+        position: relative;
+    }
+    header ul li {
+        float:left;
+        width: 200px;
+        height: 100px;
+        margin: 10px;
+        padding: 10px;
+        position: relative;
+    }
+    header .logo {
+        float: left;
+        width: 20%;
+        height: inherit;
+        display: block;
+        box-shadow: inset 0 0 10px #000000;
+        background: #059e05;
+    }
+    header .logo span {
+        color: #cfcfcf;
+        font-size: .9em;
+        text-align: center;
+        padding: 15px;
+        margin: 15px;
+    }
+}
+@media only screen and (max-width: 1150px) {
+    header {
+        position: relative;
+    }
+    header ul li {
+        float:left;
+        width: 135px;
+        margin: 8px;
+        padding: 8px;
+        position: relative;
+    }
+    header .logo span {
+        font-size: .9em;
+    }
+}
 @media only screen and (max-width: 934px) {
     .content {
         width: 100%;   
@@ -367,9 +470,13 @@ header .menu-toggle {
     .footer .footer-content .contact-form .contact-btn {
         width: 100%;
     }
+    header .logo span {
+        font-size: .7em;
+    }
 }
 @media only screen and (max-width: 770px) {
     header {
+        height: 66px;
         position: relative;
     }
     .main-content-wrapper {
@@ -386,7 +493,15 @@ header .menu-toggle {
     }
     header ul li {
         width: 100%;
-
+    }
+    header ul li ul {
+        position: relative;
+        display: block;
+        width: 100%
+    }
+    header ul li ul li a {
+        padding: 10px;
+        background: #059e05;
     }
     header .menu-toggle {
         display: block;
@@ -396,7 +511,20 @@ header .menu-toggle {
         font-size: 1.9em;
     }
     header .logo {
-        margin-left: .5em;
+        min-width: 50%;
+        text-align: center;
+    }
+    header .logo span {
+        overflow: hidden;
+        box-sizing: border-box;
+        height: 50px;
+        padding: 20px 0px 5px;
+        margin: 0px;
+    }
+    .fa-shoe-prints {
+        padding: 15px 0px 0px;
+        font-size: .8em;
+        float: left;
     }
 }
 

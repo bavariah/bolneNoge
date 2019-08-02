@@ -2,7 +2,6 @@ $(document).ready(function(){
     $('.menu-toggle').on('click', function() {
         $('.nav').toggleClass('showing');
     });
-
     $('.post-wrapper').slick({
         slidesToShow: 4,
         slidesToScroll: 1,
