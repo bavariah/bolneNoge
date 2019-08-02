@@ -202,6 +202,17 @@ header .menu-toggle {
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
+/* label */
+.label {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 150px;
+    text-align: center;
+    background: #059e05;
+    margin: 50px 0px;
+    padding: 52px 0px;
+}
 /* content */
 .content {
     width: 90%;
@@ -221,6 +232,38 @@ header .menu-toggle {
 .content .main-content.single .post-title {
     text-align: center;
     margin-bottom: 40px;
+}
+.welcome {
+    display: block;
+    width: 100%;
+    height: 400px;
+    margin: 20px auto;
+    background: #000000;
+    position: relative;
+}
+.welcome-preview {
+    background: linear-gradient(to right, rgb(10, 226, 26), rgb(9, 113, 16));
+    height: inherit;
+    padding: 30px 30px;
+    width: 50%;
+    margin: 0px 50px 0px 100px;
+    float: left;
+    border-radius: 10px;
+}
+.preview-title {
+    display: block;
+    margin-top: 50px;
+    padding: 50px 0px 0px 0px;
+    height: 150px;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    text-align: center;
+}
+.welcome-image {
+    height: inherit;
+    width: 30%;
+    float: right;
+    margin-right: 50px;
 }
 .content .main-content .post {
     width: 95%;
@@ -438,6 +481,19 @@ header .menu-toggle {
     header .logo span {
         font-size: .9em;
     }
+    .label {
+        margin: 0px;
+    }
+    .welcome-preview {
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+    }
+    .welcome-image {
+        height: inherit;
+        width: 100%;
+        margin: 0px; 
+    }
 }
 @media only screen and (max-width: 934px) {
     .content {
@@ -552,5 +608,10 @@ header .menu-toggle {
     }
     .content .main-content.single {
         padding: 10px 20px;
+    }
+    .label {
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
     }
 }
