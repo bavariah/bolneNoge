@@ -1,7 +1,16 @@
-$(document).ready(function(){
-    $('.menu-toggle').on('click', function() {
-        $('.nav').toggleClass('showing');
-    });
+$(document).ready(
+  function() {
+    $('.menu-toggle').click(function() {
+      $('nav').toggleClass('active')
+    })
+
+    $('ul li').click(function() {
+      $(this).siblings().removeClass('active');
+      $(this).toggleClass('active');
+    })
+  }
+)
+
     $('.post-wrapper').slick({
         slidesToShow: 4,
         slidesToScroll: 1,
@@ -39,4 +48,3 @@ $(document).ready(function(){
           ]
       });
 
-});
