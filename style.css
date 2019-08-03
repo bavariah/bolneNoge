@@ -267,6 +267,7 @@ header {
     margin-bottom: 10px;
     font-size: 1.2em;
     transition: all .3s;
+    list-style: none;
 }
 .footer .footer-content .links ul a:hover {
     color: white;
@@ -340,10 +341,32 @@ header {
     header .logo img {
         max-width: 300px;
     }
+    .footer {
+        height: auto;
+    }
+    .footer .footer-content {
+        height: auto;
+        flex-direction: column;
+    }
+    .footer .footer-content .contact-form {
+        padding-bottom: 90px;
+    }
+    .footer .footer-content .contact-form .contact-btn {
+        width: 100%;
+    }
+    .footer .footer-content .about {
+        text-align: center;
+    }
+    .footer .footer-content .links {
+        text-align: center;
+    }
+    .footer .footer-content .contact-form h2 {
+        text-align: center;
+    }
   }
   @media (max-width: 500px) {
     header {
-        padding: 0px 50px 0px 0px;
+        padding: 0px 40px 0px 0px;
       }
     header .logo img {
         max-width: 250px;
