@@ -102,6 +102,7 @@ header {
     line-height: 70px;
     color: #fff;
     right: 1px;
+    cursor: pointer;
   }
   
   header nav ul li.active.sub-menu:before {
