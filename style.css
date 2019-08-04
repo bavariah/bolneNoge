@@ -224,7 +224,7 @@ header {
 .post-slider .next {
     position: absolute;
     top: 50%;
-    right: 30px;
+    right: 25px;
     font-size: 1.7em;
     color: #06662e;
     cursor: pointer;
@@ -232,7 +232,7 @@ header {
 .post-slider .prev {
     position: absolute;
     top: 50%;
-    left: 30px;
+    left: 25px;
     font-size: 1.7em;
     color: #06662e;
     cursor: pointer;
@@ -443,6 +443,12 @@ header {
     header .logo img {
         max-width: 250px;
     }
+    .post-slider .next {
+      right: 5px;  
+  }
+  .post-slider .prev {
+      left: 5px;  
+  }
 }
   @media (max-width: 350px) {
     header {
@@ -455,9 +461,9 @@ header {
         font-size: 20px;
     }
     .post-slider .next {
-      right: 3px;  
+      right: 0px;  
   }
   .post-slider .prev {
-      left: 3px;  
+      left: 0px;  
   }
 }
