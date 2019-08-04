@@ -155,10 +155,63 @@ header {
 
 /* page wrapp*/
 .page-wrapper {
+  padding-top: 150px;
     min-height: 100%;
 }
-.page-wrapper a:hover {
-    color: #06662e;
+/* CONTENT */
+.content {
+  display: flex;
+  width: 90%;
+  margin: auto;
+  min-height: 80vh;
+  align-items: center;
+}
+.introduction {
+ flex: 1;
+}
+.cover {
+  flex: 1;
+}
+.intro-text {
+  animation: sliding 1.5s ease;
+}
+.intro-text h1 {
+   color: white;
+   background: #008080;
+   text-align: center;
+   border-radius: 30px;
+   font-size: 44px;
+   font-weight: 500;
+}
+.intro-text p {
+  margin-top: 15px;
+  font-size: 22px;
+  text-align: center;
+}
+.cover img {
+  border-radius: 5px;
+  height: 60vh;
+  animation: drop 1.5s ease;
+}
+@keyframes sliding {
+  0% {
+    opacity: 0;
+    transform: translateX(-80px)
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0px)
+  }
+}
+@keyframes drop {
+  0% {
+    opacity: 0;
+    transform: translateY(-80px)
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0px)
+  }
 }
 /* post slider */
 .post-slider {
@@ -183,6 +236,9 @@ header {
     font-size: 1.7em;
     color: #06662e;
     cursor: pointer;
+}
+.post-info h4 {
+  color: #008080;
 }
 .post-slider .post-wrapper {
     width: 84%;
@@ -210,14 +266,6 @@ header {
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
-/* label */
-
-/* content single */
-
-
-
-/*sidebar*/
-
 /* footer*/
 .footer {
     background: #303036;
@@ -303,6 +351,30 @@ header {
     padding-top: 20px;
 }
 /* medio queries */
+@media (max-width: 1024px) {
+  .page-wrapper {
+    padding-top: 80px;
+  }
+    .content {
+      flex-direction: column;
+    }
+    .introduction {
+      margin-top: 5vh;
+      text-align: center;
+    }
+    .intro-text h1 {
+      font-size: 30px;
+    }
+    .intro-text p {
+      font-size: 18px;
+    }
+    .cover img {
+      animation: sliding 1.5s ease;
+    }
+    .intro-text {
+      animation: drop 1.5s ease;
+    }
+}
 @media (max-width: 860px) {
     header {
       padding: 0px 20px 0px 0px;
@@ -382,4 +454,10 @@ header {
     .menu-toggle {
         font-size: 20px;
     }
+    .post-slider .next {
+      right: 3px;  
+  }
+  .post-slider .prev {
+      left: 3px;  
+  }
 }
