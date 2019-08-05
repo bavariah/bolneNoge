@@ -156,9 +156,9 @@ header {
 
 /* page wrapp*/
 .page-wrapper {
-  padding-bottom: 50px;
+  padding-bottom: 30px;
   padding-top: 160px;
-    min-height: 100%;
+  min-height: 100%;
 }
 /* CONTENT */
 .content {
