@@ -186,6 +186,9 @@ header {
     margin-bottom: 40px;
 }
 /*SINGLE SIDEBAR*/
+.fb-page {
+  padding-left: 20px;
+}
 .content .sidebar {
     width: 30%;
     float: left;
@@ -390,6 +393,9 @@ header {
     .intro-text {
       animation: drop 1.5s ease;
     }
+    .fb-page {
+      padding:0px;
+    }
 }
 @media (max-width: 860px) {
     header {
@@ -477,6 +483,9 @@ header {
   .post-slider .prev {
       left: 5px;  
   }
+  .fb-page {
+    padding-left: 20px;
+  }
 }
   @media (max-width: 350px) {
     header {
@@ -493,5 +502,9 @@ header {
   }
   .post-slider .prev {
       left: 0px;  
+  }
+  .fb-page {
+    max-width: 320px;
+    padding: 0px;
   }
 }
