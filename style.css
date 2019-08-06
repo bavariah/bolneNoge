@@ -440,6 +440,19 @@ header {
     .footer .footer-content .contact-form h2 {
         text-align: center;
     }
+    .footer .footer-content .contact-form {
+      position: relative;
+      padding-bottom: 75%;
+      height: 0;
+      overflow: hidden; 
+    }
+    .resp-frame {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100% !important;
+      height: 100% !important;
+    }
   }
   @media (max-width: 500px) {
     header {
