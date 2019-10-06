@@ -25,6 +25,7 @@ h6 {
 a {
   text-decoration: none;
   color: inherit;
+  cursor: pointer;
 }
 .clearfix::after {
   content: " ";
@@ -140,7 +141,7 @@ header nav ul li a.active {
 .menu-toggle {
   color: #fff;
   float: right;
-  line-height: 70px;
+  line-height: 100px;
   font-size: 30px;
   cursor: pointer;
   display: none;
@@ -442,9 +443,7 @@ header nav ul li a.active {
   header nav ul li ul li {
     width: 100%;
   }
-  header .logo img {
-    max-width: 300px;
-  }
+
   .footer {
     height: auto;
   }
@@ -485,9 +484,7 @@ header nav ul li a.active {
   header {
     padding: 0px 40px 0px 0px;
   }
-  header .logo img {
-    max-width: 250px;
-  }
+
   .post-slider .next {
     right: 5px;
   }
@@ -499,9 +496,7 @@ header nav ul li a.active {
   header {
     padding: 0px 5px 0px 0px;
   }
-  header .logo img {
-    max-width: 250px;
-  }
+
   .menu-toggle {
     font-size: 20px;
   }

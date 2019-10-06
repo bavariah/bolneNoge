@@ -19,7 +19,7 @@ h4,
 h5,
 h6 {
   font-family: "Roboto", sans-serif;
-  color: #008080;
+  color: #047eb6;
   margin: 5px;
 }
 a {
@@ -33,7 +33,7 @@ a {
 }
 .btn {
   padding: 0.5rem 1rem;
-  background: #0b8d41;
+  background: #047eb6;
   color: white;
   border: 1px solid transparent;
   border-radius: 0.25rem;
@@ -44,7 +44,7 @@ a {
 }
 .btn:hover {
   color: white !important;
-  background: #06662e;
+  background: #047eb6;
 }
 .text-input {
   padding: 0.7rem 1rem;
@@ -179,7 +179,7 @@ header nav ul li a.active {
   border-radius: 5px;
 }
 .content .main-content.single h2 {
-  color: #008080;
+  color: #1067ad;
 }
 .content .main-content.single .post-title {
   text-align: center;
@@ -245,7 +245,7 @@ header nav ul li a.active {
   top: 50%;
   right: 25px;
   font-size: 1.7em;
-  color: #06662e;
+  color: #1067ad;
   cursor: pointer;
 }
 .post-slider .prev {
@@ -253,7 +253,7 @@ header nav ul li a.active {
   top: 50%;
   left: 25px;
   font-size: 1.7em;
-  color: #06662e;
+  color: #1067ad;
   cursor: pointer;
 }
 .post-info h4 {
@@ -305,7 +305,7 @@ header nav ul li a.active {
   color: white;
 }
 .footer .footer-content .about h1 span {
-  color: #1fee75;
+  color: #1067ad;
 }
 .footer .footer-content .about .contact span {
   display: block;
@@ -440,9 +440,6 @@ header nav ul li a.active {
   header nav ul li ul li {
     width: 100%;
   }
-  header .logo img {
-    max-width: 300px;
-  }
   .content {
     width: 100%;
   }
@@ -503,9 +500,6 @@ header nav ul li a.active {
   header {
     padding: 0px 40px 0px 0px;
   }
-  header .logo img {
-    max-width: 250px;
-  }
   .post-slider .next {
     right: 5px;
   }
@@ -527,9 +521,6 @@ header nav ul li a.active {
 @media (max-width: 350px) {
   header {
     padding: 0px 5px 0px 0px;
-  }
-  header .logo img {
-    max-width: 250px;
   }
   .menu-toggle {
     font-size: 20px;
