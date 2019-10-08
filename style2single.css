@@ -68,12 +68,13 @@ header {
   padding: 0px 50px 0px 0px;
   width: 100%;
   box-sizing: border-box;
-  background: #047eb6;
+  background: #2b9fec;
 }
 header .logo img {
   height: 100px;
   max-width: 120px;
   width: 100%;
+  border-radius: 30px;
 }
 header .logo {
   color: #fff;
@@ -85,8 +86,9 @@ header .logo {
 }
 
 header nav {
-  margin-top: 15px;
-  height: 70px;
+  font-family: "Roboto", sans-serif;
+  margin-right: 100px;
+  height: 100px;
   float: right;
 }
 
@@ -120,9 +122,9 @@ header nav ul li ul li {
 }
 
 header nav ul li a {
-  height: 70px;
-  line-height: 70px;
-  padding: 0 20px;
+  height: 100px;
+  line-height: 100px;
+  padding: 0 45px;
   color: #fff;
   text-decoration: none;
   display: block;
@@ -184,7 +186,7 @@ header nav ul li a.active {
   border-radius: 5px;
 }
 .content .main-content.single h2 {
-  color: #1067ad;
+  color: #2b9fec;
 }
 .content .main-content.single .post-title {
   text-align: center;

@@ -69,12 +69,13 @@ header {
   padding: 0px 50px 0px 0px;
   width: 100%;
   box-sizing: border-box;
-  background: #047eb6;
+  background: #2b9fec;
 }
 header .logo img {
   height: 100px;
   max-width: 120px;
   width: 100%;
+  border-radius: 30px;
 }
 header .logo {
   color: #fff;
@@ -86,8 +87,9 @@ header .logo {
 }
 
 header nav {
-  margin-top: 15px;
-  height: 70px;
+  font-family: "Roboto", sans-serif;
+  margin-right: 100px;
+  height: 100px;
   float: right;
 }
 
@@ -121,9 +123,9 @@ header nav ul li ul li {
 }
 
 header nav ul li a {
-  height: 70px;
-  line-height: 70px;
-  padding: 0 20px;
+  height: 100px;
+  line-height: 100px;
+  padding: 0 45px;
   color: #fff;
   text-decoration: none;
   display: block;
@@ -178,8 +180,9 @@ header nav ul li a.active {
   padding-right: 25px;
 }
 .intro-text h1 {
+  font-family: "Dancing Script", cursive;
   color: white;
-  background: #047eb6;
+  background: #2b9fec;
   text-align: center;
   border-radius: 30px;
   font-size: 44px;
@@ -194,7 +197,7 @@ header nav ul li a.active {
   color: rgb(179, 0, 0);
 }
 .cover img {
-  border-radius: 5px;
+  border-radius: 15px;
   height: 60vh;
   animation: drop 1.5s ease;
 }
@@ -221,17 +224,17 @@ header nav ul li a.active {
 /* podologia */
 .podologia {
   color: #fff;
-  background: url(./images/family.jpg) no-repeat center center/cover;
+  background: url(./images/grey.jpg) no-repeat center center/cover;
   text-align: center;
   width: 100%;
   height: 100vh;
-  opacity: 0.9;
 }
 .hero-text {
+  padding-top: 50px;
   color: #fff;
   min-height: 16em;
   position: relative;
-  max-width: 80%;
+  max-width: 60%;
   margin: auto;
   font-family: "Roboto", sans-serif;
 }
@@ -445,7 +448,9 @@ header nav ul li a.active {
   header nav ul li ul li {
     width: 100%;
   }
-
+  .post-slider {
+    height: auto;
+  }
   .footer {
     height: auto;
   }
