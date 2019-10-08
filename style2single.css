@@ -170,6 +170,7 @@ header nav ul li a.active {
 }
 
 .content .main-content {
+  font-family: "Roboto", sans-serif;
   width: 70%;
   float: left;
 }
