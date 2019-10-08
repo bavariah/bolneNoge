@@ -140,7 +140,7 @@ header nav ul li a.active {
 .menu-toggle {
   color: #fff;
   float: right;
-  line-height: 70px;
+  line-height: 100px;
   font-size: 30px;
   cursor: pointer;
   display: none;
@@ -421,7 +421,7 @@ header nav ul li a.active {
     /* use display none or left:-100% to hide the nav  */
     /* display: none; */
     position: absolute;
-    top: 70px;
+    top: 80px;
     left: -100%;
     width: 100%;
     height: calc(100vh - 50px);
@@ -440,7 +440,7 @@ header nav ul li a.active {
   }
   header nav ul li.active ul {
     position: relative;
-    background: #008080;
+    background: #047eb6;
   }
   header nav ul li ul li {
     width: 100%;

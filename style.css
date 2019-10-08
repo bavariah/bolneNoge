@@ -175,6 +175,7 @@ header nav ul li a.active {
 }
 .intro-text {
   animation: sliding 1.5s ease;
+  padding-right: 25px;
 }
 .intro-text h1 {
   color: white;
@@ -218,29 +219,19 @@ header nav ul li a.active {
 .podologia {
   color: #fff;
   background: url(./images/family.jpg) no-repeat center center/cover;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   text-align: center;
   width: 100%;
   height: 100vh;
-  z-index: -2;
-  opacity: 0.9;
-}
-.hero-space {
-  display: block;
-  position: absolute;
-  width: 100%;
-  background: rgba(75, 74, 74, 0.5);
-  z-index: -1;
-  color: #fff;
+  opacity: 0.8;
 }
 .hero-text {
   color: #fff;
-  min-width: 100%;
   min-height: 16em;
   position: relative;
+  max-width: 80%;
+  margin: auto;
+  border: red solid 1px;
+  font-weight: bold;
 }
 /* post slider */
 .post-slider {
@@ -406,6 +397,14 @@ header nav ul li a.active {
   }
   .intro-text {
     animation: drop 1.5s ease;
+  }
+  .podologia {
+    position: relative;
+    height: auto;
+    color: #fff;
+    padding: 20px 50px;
+    font-size: 1.1em;
+    border-radius: 5px;
   }
 }
 @media (max-width: 860px) {
