@@ -378,6 +378,32 @@ header nav ul li a.active {
   padding-top: 20px;
 }
 /* medio queries */
+@media (max-width: 1400px) {
+  .page-wrapper {
+    padding-top: 80px;
+  }
+  .content {
+    flex-direction: column;
+  }
+  .introduction {
+    margin-top: 5vh;
+    text-align: center;
+  }
+  .intro-text h1 {
+    font-size: 30px;
+  }
+  .intro-text p {
+    font-size: 18px;
+  }
+  .cover img {
+    animation: sliding 1.5s ease;
+    max-width: 100%;
+    max-height: 450px;
+  }
+  .intro-text {
+    animation: drop 1.5s ease;
+  }
+}
 @media (max-width: 1024px) {
   .page-wrapper {
     padding-top: 80px;
@@ -412,6 +438,9 @@ header nav ul li a.active {
     font-size: 1.1em;
     border-radius: 5px;
   }
+  .resp-frame {
+    width: 300px;
+  }
 }
 @media (max-width: 860px) {
   header {
@@ -424,7 +453,7 @@ header nav ul li a.active {
     /* use display none or left:-100% to hide the nav  */
     /* display: none; */
     position: absolute;
-    top: 80px;
+    top: 95px;
     left: -100%;
     width: 100%;
     height: calc(100vh - 50px);

@@ -424,7 +424,7 @@ header nav ul li a.active {
     /* use display none or left:-100% to hide the nav  */
     /* display: none; */
     position: absolute;
-    top: 80px;
+    top: 95px;
     left: -100%;
     width: 100%;
     height: calc(100vh - 50px);
