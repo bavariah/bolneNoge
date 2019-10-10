@@ -229,15 +229,55 @@ header nav ul li a.active {
   width: 100%;
   height: 100vh;
 }
-.hero-text {
-  padding-top: 50px;
-  color: #fff;
-  min-height: 16em;
-  position: relative;
-  max-width: 60%;
+.hero-space {
+  display: flex;
+  width: 80%;
   margin: auto;
-  font-family: "Roboto", sans-serif;
+  min-height: 40%;
+  align-items: center;
 }
+.slika-stop {
+  flex: 1;
+  padding-right: 20px;
+}
+.slika-stop img {
+  width: 500px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 5px 10px 8px 10px #000000;
+}
+.hero-text {
+  padding: 50px 20px;
+  border-bottom: 1px #ffffff dotted;
+  flex: 1;
+  line-height: 20px;
+  font-size: 14px;
+}
+.hero-tape {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  min-height: 55%;
+  align-items: center;
+}
+.hero-mark {
+  flex: 1;
+  padding: 30px 10px;
+  border-bottom: 1px #ffffff dotted;
+  line-height: 20px;
+  font-size: 14px;
+}
+.slika-tape {
+  flex: 1;
+  padding-right: 20px;
+}
+.slika-tape img {
+  width: 500px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 5px 10px 8px 10px #000000;
+}
+
 /* post slider */
 .post-slider {
   position: relative;
@@ -403,6 +443,52 @@ header nav ul li a.active {
   .intro-text {
     animation: drop 1.5s ease;
   }
+  .podologia {
+    position: relative;
+    height: auto;
+    color: #fff;
+  }
+  .hero-space {
+    padding-top: 20px;
+    flex-direction: column;
+  }
+  .slika-stop {
+    flex: 1;
+    padding-right: 20px;
+  }
+  .slika-stop img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: none;
+  }
+  .hero-text {
+    padding: 50px 20px;
+    border: none;
+    flex: 1;
+    line-height: 20px;
+    font-size: 14px;
+  }
+  .hero-tape {
+    flex-direction: column;
+  }
+  .hero-mark {
+    flex: 1;
+    padding: 30px 10px;
+    border: none;
+    line-height: 20px;
+    font-size: 14px;
+  }
+  .slika-tape {
+    flex: 1;
+    padding-right: 20px;
+  }
+  .slika-tape img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: none;
+  }
 }
 @media (max-width: 1024px) {
   .page-wrapper {
@@ -429,15 +515,7 @@ header nav ul li a.active {
   .intro-text {
     animation: drop 1.5s ease;
   }
-  .podologia {
-    position: relative;
-    background: url(./images/grey.jpg) no-repeat center center/cover;
-    height: auto;
-    color: #fff;
-    padding: 20px 50px;
-    font-size: 1.1em;
-    border-radius: 5px;
-  }
+
   .resp-frame {
     width: 300px;
   }
