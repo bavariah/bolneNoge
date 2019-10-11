@@ -198,7 +198,7 @@ header nav ul li a.active {
 }
 .cover img {
   border-radius: 15px;
-  height: 60vh;
+  height: 45vh;
   animation: drop 1.5s ease;
 }
 @keyframes sliding {
@@ -251,7 +251,7 @@ header nav ul li a.active {
   border-bottom: 1px #ffffff dotted;
   flex: 1;
   line-height: 20px;
-  font-size: 14px;
+  font-size: 16px;
 }
 .hero-tape {
   display: flex;
@@ -265,7 +265,7 @@ header nav ul li a.active {
   padding: 30px 10px;
   border-bottom: 1px #ffffff dotted;
   line-height: 20px;
-  font-size: 14px;
+  font-size: 16px;
 }
 .slika-tape {
   flex: 1;
@@ -466,8 +466,8 @@ header nav ul li a.active {
     padding: 50px 20px;
     border: none;
     flex: 1;
-    line-height: 20px;
-    font-size: 14px;
+    line-height: 22px;
+    font-size: 16px;
   }
   .hero-tape {
     flex-direction: column;
@@ -476,8 +476,8 @@ header nav ul li a.active {
     flex: 1;
     padding: 30px 10px;
     border: none;
-    line-height: 20px;
-    font-size: 14px;
+    line-height: 22px;
+    font-size: 16px;
   }
   .slika-tape {
     flex: 1;
@@ -510,7 +510,8 @@ header nav ul li a.active {
   .cover img {
     animation: sliding 1.5s ease;
     max-width: 100%;
-    max-height: 300px;
+    max-height: 250px;
+    margin: auto;
   }
   .intro-text {
     animation: drop 1.5s ease;
@@ -604,6 +605,9 @@ header nav ul li a.active {
   }
   .post-slider .prev {
     left: 5px;
+  }
+  .cover img {
+    max-height: 200px;
   }
 }
 @media (max-width: 350px) {
