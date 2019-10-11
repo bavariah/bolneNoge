@@ -406,7 +406,7 @@ header nav ul li a.active {
   }
   .gallery-wrapper {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 2rem;
   }
   .gallery-image img {
@@ -524,9 +524,20 @@ header nav ul li a.active {
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 2rem;
+    justify-items: center;
   }
   .gallery-image img {
     width: 100%;
+    width: 400px;
+    height: auto;
+  }
+}
+@media (max-width: 420px) {
+  .gallery-wrapper {
+    justify-items: center;
+  }
+  .gallery-image img {
+    width: 300px;
   }
 }
 @media (max-width: 350px) {
