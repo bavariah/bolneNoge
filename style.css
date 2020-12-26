@@ -1,4 +1,6 @@
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
@@ -9,8 +11,9 @@ body {
   padding: 0px;
   height: 100%;
   background: #e6e4e4;
-  font-family: "Lora", serif;
+  font-family: "Roboto", sans-serif;
   scroll-behavior: smooth;
+  cursor: url(./images/cursor.gif), pointer;
 }
 h1,
 h2,
@@ -59,109 +62,144 @@ a {
   font-size: 1.2em;
   font-family: "Lora", serif;
 }
+#topBtn {
+  display: none;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 5;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  background-color: #1e7ab8;
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 15px;
+  transition: 0.1s ease-in-out;
+}
+#topBtn:hover {
+  opacity: 0.9;
+}
 /* NAVBAR */
 header {
-  height: 100px;
+  height: 130px;
   z-index: 50;
-  position: absolute;
+  position: fixed;
+  display: flex;
+  justify-content: space-around;
   top: 0;
   left: 0;
-  padding: 0px 50px 0px 0px;
   width: 100%;
-  box-sizing: border-box;
   background: #2b9fec;
+}
+header .logo {
+  color: #fff;
+  height: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 header .logo img {
   height: 100px;
   max-width: 120px;
   width: 100%;
   border-radius: 30px;
+  animation: rising 2s linear;
 }
-header .logo {
-  color: #fff;
-  height: 70px;
-  line-height: 70px;
-  font-size: 24px;
-  float: left;
-  font-weight: bold;
+@keyframes rising {
+  0% {
+    opacity: 0;
+    transform: translateX(-550px) rotateY(360deg);
+  }
+  80% {
+    opacity: 1;
+    transform: translateX(20px) rotateY(60deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px) rotateY(360deg);
+  }
 }
-
-header nav {
-  font-family: "Roboto", sans-serif;
-  margin-right: 100px;
-  height: 100px;
-  float: right;
-}
-
-header nav ul {
-  height: inherit;
-  margin: 0;
-  padding: 0;
+header ul {
   display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
-header nav ul li {
+header ul li {
   list-style: none;
   position: relative;
+  margin-left: 20px;
 }
-
-header nav ul li ul {
+header ul li a {
+  height: 130px;
+  line-height: 130px;
+  padding: 0 45px;
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  transition: 0.3s ease-in-out;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+header ul li ul {
   position: absolute;
   left: 0;
   background: #333;
   display: none;
 }
 
-header nav ul li.active ul {
+header ul li.active ul {
   /* use li: hover instead */
   display: block;
 }
 
-header nav ul li ul li {
+header ul li ul li {
   display: block;
   width: 200px;
 }
 
-header nav ul li a {
-  height: 100px;
-  line-height: 100px;
-  padding: 0 45px;
-  color: #fff;
-  text-decoration: none;
-  display: block;
-}
-
-header nav ul li a:hover {
+header ul li a:hover {
   color: #fff;
   background: #1067ad;
 }
 
-header nav ul li a.active {
+header ul li a.active {
   background: #2196f3;
 }
 
 .menu-toggle {
   color: #fff;
-  float: right;
-  line-height: 100px;
-  font-size: 30px;
+  position: fixed;
+  z-index: 100;
+  top: 30px;
+  right: 20px;
+  padding: 0 30px;
+  font-size: 36px;
   cursor: pointer;
   display: none;
 }
-
 /* page wrapp*/
 .page-wrapper {
+  margin-top: 200px;
   padding-bottom: 30px;
-  padding-top: 160px;
   min-height: 100%;
 }
 /* CONTENT */
 .content {
-  display: flex;
-  width: 90%;
-  margin: auto;
-  min-height: 90vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 80%;
+  margin: 50px auto;
+  padding: 40px 20px;
   align-items: center;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px 3px #b3b3b3;
+  color: #333;
 }
 .content h1 {
   font-size: 4rem;
@@ -170,10 +208,18 @@ header nav ul li a.active {
   font-size: 1.5rem;
 }
 .introduction {
-  flex: 1;
+  margin: auto;
+  max-width: 900px;
 }
 .cover {
-  flex: 1;
+  max-width: 900px;
+  margin: auto;
+}
+.cover img {
+  border-radius: 15px;
+  height: 250px;
+  animation: drop 1.5s ease;
+  margin: 50px auto;
 }
 .intro-text {
   animation: sliding 1.5s ease;
@@ -181,7 +227,7 @@ header nav ul li a.active {
 }
 .intro-text h1 {
   font-family: "Dancing Script", cursive;
-  color: white;
+  color: #ffffff;
   background: #2b9fec;
   text-align: center;
   border-radius: 30px;
@@ -196,15 +242,11 @@ header nav ul li a.active {
 .intro-text span {
   color: rgb(179, 0, 0);
 }
-.cover img {
-  border-radius: 15px;
-  height: 45vh;
-  animation: drop 1.5s ease;
-}
+
 @keyframes sliding {
   0% {
     opacity: 0;
-    transform: translateX(-80px);
+    transform: translateY(-80px);
   }
   100% {
     opacity: 1;
@@ -214,20 +256,30 @@ header nav ul li a.active {
 @keyframes drop {
   0% {
     opacity: 0;
-    transform: translateY(-80px);
+    transform: translateY(80px) scale(0);
   }
   100% {
     opacity: 1;
-    transform: translateY(0px);
+    transform: translateY(0px) scale(1);
   }
 }
 /* podologia */
 .podologia {
-  color: #fff;
-  background: url(./images/grey.jpg) no-repeat center center/cover;
+  color: #333;
+  background-color: #fff;
   text-align: center;
-  width: 100%;
+  width: 80%;
+  margin: auto;
+  padding: 100px 20px;
+  border-radius: 10px;
   height: 100vh;
+  box-shadow: 5px 5px 10px 3px #b3b3b3;
+}
+.podologia span {
+  transition: 0.2s ease-in-out;
+}
+.podologia:hover span {
+  color: #2b9fec;
 }
 .hero-space {
   display: flex;
@@ -243,14 +295,14 @@ header nav ul li a.active {
 .slika-stop img {
   width: 500px;
   height: auto;
-  border-radius: 10px;
-  box-shadow: 5px 10px 8px 10px #000000;
+  border-radius: 50px;
 }
 .hero-text {
   padding: 50px 20px;
   border-bottom: 1px #ffffff dotted;
+  text-transform: uppercase;
   flex: 1;
-  line-height: 20px;
+  line-height: 1.3;
   font-size: 16px;
 }
 .hero-tape {
@@ -264,7 +316,8 @@ header nav ul li a.active {
   flex: 1;
   padding: 30px 10px;
   border-bottom: 1px #ffffff dotted;
-  line-height: 20px;
+  line-height: 1.3;
+  text-transform: uppercase;
   font-size: 16px;
 }
 .slika-tape {
@@ -274,8 +327,7 @@ header nav ul li a.active {
 .slika-tape img {
   width: 500px;
   height: auto;
-  border-radius: 10px;
-  box-shadow: 5px 10px 8px 10px #000000;
+  border-radius: 50px;
 }
 
 /* post slider */
@@ -419,12 +471,6 @@ header nav ul li a.active {
 }
 /* medio queries */
 @media (max-width: 1400px) {
-  .page-wrapper {
-    padding-top: 80px;
-  }
-  .content {
-    flex-direction: column;
-  }
   .introduction {
     margin-top: 5vh;
     text-align: center;
@@ -435,18 +481,9 @@ header nav ul li a.active {
   .intro-text p {
     font-size: 18px;
   }
-  .cover img {
-    animation: sliding 1.5s ease;
-    max-width: 100%;
-    max-height: 450px;
-  }
-  .intro-text {
-    animation: drop 1.5s ease;
-  }
   .podologia {
     position: relative;
     height: auto;
-    color: #fff;
   }
   .hero-space {
     padding-top: 20px;
@@ -491,12 +528,6 @@ header nav ul li a.active {
   }
 }
 @media (max-width: 1024px) {
-  .page-wrapper {
-    padding-top: 80px;
-  }
-  .content {
-    flex-direction: column;
-  }
   .introduction {
     margin-top: 5vh;
     text-align: center;
@@ -507,54 +538,84 @@ header nav ul li a.active {
   .intro-text p {
     font-size: 18px;
   }
-  .cover img {
-    animation: sliding 1.5s ease;
-    max-width: 100%;
-    max-height: 250px;
-    margin: auto;
-  }
-  .intro-text {
-    animation: drop 1.5s ease;
-  }
-
   .resp-frame {
     width: 300px;
   }
 }
 @media (max-width: 860px) {
-  header {
-    padding: 0px 20px 0px 0px;
-  }
   .menu-toggle {
     display: block;
   }
-  header nav {
+  header {
+    padding: 0;
+    height: 100px;
+    justify-content: flex-start;
+  }
+  header .nav {
     /* use display none or left:-100% to hide the nav  */
     /* display: none; */
     position: absolute;
-    top: 95px;
+    top: 100px;
     left: -100%;
     width: 100%;
     height: calc(100vh - 50px);
-    background: #333;
+    background: #047eb6d0;
     transition: 0.5s;
   }
-  header nav.active {
+  header .nav.active {
     left: 0;
   }
-  header nav ul {
+  header ul {
     display: block;
     text-align: center;
   }
-  header nav ul li a {
-    border-bottom: #2d3838;
-  }
-  header nav ul li.active ul {
+  header .nav ul li.active ul {
     position: relative;
+    width: 100%;
     background: #047eb6;
   }
-  header nav ul li ul li {
+  header .nav ul li {
+    padding: 0;
+    margin-left: 0;
     width: 100%;
+  }
+  header .nav ul li a {
+    padding: 0;
+    margin-left: 0;
+    width: 100%;
+  }
+  header .logo {
+    color: #fff;
+    height: 100px;
+    display: flex;
+    margin-left: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+  header .logo img {
+    height: 80px;
+    max-width: 100px;
+    animation: rising 2.5s linear;
+  }
+  .content {
+    width: 90%;
+    gap: 50px;
+  }
+  .introduction {
+    margin: auto;
+    max-width: auto;
+  }
+  .cover {
+    max-width: 100%;
+  }
+  .cover img {
+    border-radius: 15px;
+    height: 180px;
+    margin: auto;
+  }
+  .podologia {
+    width: 90%;
+    padding: 20px;
   }
   .post-slider {
     height: auto;
@@ -596,10 +657,6 @@ header nav ul li a.active {
   }
 }
 @media (max-width: 500px) {
-  header {
-    padding: 0px 40px 0px 0px;
-  }
-
   .post-slider .next {
     right: 5px;
   }
@@ -607,21 +664,29 @@ header nav ul li a.active {
     left: 5px;
   }
   .cover img {
-    max-height: 200px;
+    height: 150px;
+  }
+  #topBtn {
+    bottom: 20px;
+    right: 20px;
+    font-size: 1.5rem;
+    padding: 10px;
+    border-radius: 20px;
+  }
+}
+@media (max-width: 400px) {
+  .cover img {
+    height: 120px;
   }
 }
 @media (max-width: 350px) {
-  header {
-    padding: 0px 5px 0px 0px;
-  }
-
-  .menu-toggle {
-    font-size: 20px;
-  }
   .post-slider .next {
     right: 0px;
   }
   .post-slider .prev {
     left: 0px;
+  }
+  .cover img {
+    height: 100px;
   }
 }
