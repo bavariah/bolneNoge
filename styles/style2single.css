@@ -30,11 +30,6 @@ a {
   color: inherit;
   cursor: pointer;
 }
-.clearfix::after {
-  content: " ";
-  display: block;
-  clear: both;
-}
 .btn {
   padding: 0.5rem 1rem;
   background: #047eb6;
@@ -186,7 +181,7 @@ header ul li a:hover {
 }
 /* SINGLE PAGES */
 .content {
-  width: 75%;
+  width: 70%;
   margin: 50px auto;
 }
 .content .main-content.gala {
@@ -198,16 +193,38 @@ header ul li a:hover {
   font-size: 1.1em;
   border-radius: 5px;
 }
-.content .main-content.single .post-title {
+.post-title {
   text-align: center;
-  font-size: 3rem;
-  letter-spacing: 0.4rem;
+  font-size: 4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
   margin-bottom: 50px;
+  animation: showoff 1.5s linear;
+}
+.post-content {
+  font-size: 1.3rem;
+}
+@keyframes showoff {
+  0% {
+    transform: scale(0);
+  }
+  55% {
+    transform: scale(1.1);
+  }
+  70% {
+    transform: scale(1);
+  }
+  85% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 /*SINGLE SIDEBAR*/
 .sidebar .fb-page {
   padding-left: 20px;
-  width: 400px;
+  width: 380px;
 }
 .content .sidebar {
   padding: 30px;
@@ -238,10 +255,14 @@ header ul li a:hover {
 .footer .footer-content .about h1 span {
   color: #1067ad;
 }
+.footer .footer-content .about p {
+  margin-bottom: 10px;
+}
 .footer .footer-content .about .contact span {
   display: block;
   font-size: 1.1em;
   margin-bottom: 8px;
+  padding: 2px;
 }
 .footer .footer-content .about .socials a {
   border: 1px solid gray;
@@ -303,10 +324,18 @@ header ul li a:hover {
 /* medio queries */
 @media (max-width: 1024px) {
   .page-wrapper {
-    padding-top: 100px;
+    padding-top: 50px;
+    padding-bottom: 40px;
   }
   .content {
     flex-direction: column;
+  }
+  .content .main-content.single {
+    padding-top: 50px;
+  }
+  .post-title {
+    padding-top: 30px;
+    letter-spacing: 0.4rem;
   }
   .introduction {
     margin-top: 5vh;
@@ -391,11 +420,10 @@ header ul li a:hover {
   }
   .content .main-content {
     width: 100%;
-    padding: 10px;
   }
   .content .sidebar {
     width: 100%;
-    padding: 20px;
+    padding: 10px;
   }
   .footer {
     height: auto;
@@ -437,6 +465,16 @@ header ul li a:hover {
   header {
     padding: 0px 40px 0px 0px;
   }
+  .content .main-content.single {
+    width: 100%;
+    padding: 25px;
+  }
+  .post-title {
+    padding-top: 20px;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+  }
   .post-slider .next {
     right: 5px;
   }
@@ -458,6 +496,11 @@ header ul li a:hover {
   header {
     padding: 0px 5px 0px 0px;
   }
+  .post-title {
+    padding-top: 20px;
+    font-size: 2rem;
+    letter-spacing: 0.2rem;
+  }
   .intro-text h1 {
     font-size: 1.4rem;
   }
@@ -469,5 +512,14 @@ header ul li a:hover {
   }
   .post-slider .prev {
     left: 0px;
+  }
+}
+@media (max-width: 330px) {
+  .post-title {
+    font-size: 1.8rem;
+    letter-spacing: 0.1rem;
+  }
+  .sidebar .fb-page {
+    display: none;
   }
 }

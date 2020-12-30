@@ -175,6 +175,7 @@ header ul li a.active {
 /* CONTENT */
 .content {
   display: grid;
+  position: relative;
   grid-template-columns: 1fr;
   width: 80%;
   margin: 50px auto;
@@ -184,6 +185,62 @@ header ul li a.active {
   border-radius: 10px;
   box-shadow: 5px 5px 10px 3px #b3b3b3;
   color: #333;
+}
+.stopL {
+  z-index: 2;
+  position: absolute;
+  bottom: 60px;
+  left: 200px;
+  transform: rotateZ(-30deg);
+}
+.stopR {
+  z-index: 2;
+  position: absolute;
+  bottom: 60px;
+  left: 250px;
+  transform: rotateZ(-30deg);
+}
+.stopL2 {
+  z-index: 2;
+  position: absolute;
+  top: 80px;
+  left: 120px;
+  transform: rotateZ(30deg);
+}
+.stopR2 {
+  z-index: 2;
+  position: absolute;
+  top: 80px;
+  left: 170px;
+  transform: rotateZ(30deg);
+}
+.stopL3 {
+  z-index: 2;
+  position: absolute;
+  bottom: 330px;
+  right: 270px;
+  transform: rotateZ(-30deg);
+}
+.stopR3 {
+  z-index: 2;
+  position: absolute;
+  bottom: 330px;
+  right: 210px;
+  transform: rotateZ(-30deg);
+}
+.stopL4 {
+  z-index: 2;
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  transform: rotate(210deg);
+}
+.stopR4 {
+  z-index: 2;
+  position: absolute;
+  bottom: 30px;
+  right: 100px;
+  transform: rotate(210deg);
 }
 .introduction {
   margin: auto;
@@ -249,10 +306,9 @@ header ul li a.active {
   color: #333;
   background-color: #fff;
   text-align: center;
-  width: 80%;
+  width: 100%;
   margin: 150px auto;
   padding: 100px 20px;
-  border-radius: 10px;
   box-shadow: 5px 5px 10px 3px #b3b3b3;
 }
 .podologia span {
@@ -366,10 +422,14 @@ header ul li a.active {
 .footer .footer-content .about h1 span {
   color: #1067ad;
 }
+.footer .footer-content .about p {
+  margin-bottom: 10px;
+}
 .footer .footer-content .about .contact span {
   display: block;
   font-size: 1.1em;
   margin-bottom: 8px;
+  padding: 2px;
 }
 .footer .footer-content .about .socials a {
   border: 1px solid gray;
@@ -434,8 +494,22 @@ header ul li a.active {
     margin-top: 5vh;
     text-align: center;
   }
+  .stopL3 {
+    z-index: 2;
+    position: absolute;
+    bottom: 300px;
+    right: 170px;
+    transform: rotateZ(-30deg);
+  }
+  .stopR3 {
+    z-index: 2;
+    position: absolute;
+    bottom: 300px;
+    right: 120px;
+    transform: rotateZ(-30deg);
+  }
   .intro-text h1 {
-    font-size: 30px;
+    font-size: 3rem;
   }
   .intro-text p {
     font-size: 18px;
@@ -447,8 +521,7 @@ header ul li a.active {
 @media (max-width: 1354px) {
   .podologia {
     grid-template-columns: 1fr;
-    width: 90%;
-    padding: 20px;
+    padding: 50px 20px 50px;
   }
 }
 @media (max-width: 1024px) {
@@ -456,14 +529,15 @@ header ul li a.active {
     margin-top: 5vh;
     text-align: center;
   }
-  .intro-text h1 {
-    font-size: 30px;
-  }
   .intro-text p {
     font-size: 18px;
+    line-height: 1.7;
   }
   .resp-frame {
     width: 300px;
+  }
+  .aButton {
+    display: inline-block;
   }
 }
 @media (max-width: 860px) {
@@ -521,6 +595,42 @@ header ul li a.active {
     max-width: 100px;
     animation: rising 2.5s linear;
   }
+  .stopL {
+    z-index: 2;
+    position: absolute;
+    bottom: 60px;
+    left: 50px;
+    transform: rotateZ(-30deg);
+  }
+  .stopR {
+    z-index: 2;
+    position: absolute;
+    bottom: 60px;
+    left: 100px;
+    transform: rotateZ(-30deg);
+  }
+  .stopL2 {
+    display: none;
+  }
+  .stopR2 {
+    display: none;
+  }
+  .stopL3 {
+    display: none;
+  }
+  .stopR3 {
+    display: none;
+  }
+  .stopL4 {
+    bottom: 40px;
+    right: 40px;
+    transform: rotate(210deg);
+  }
+  .stopR4 {
+    bottom: 30px;
+    right: 100px;
+    transform: rotate(210deg);
+  }
   .content {
     width: 90%;
     gap: 50px;
@@ -536,10 +646,6 @@ header ul li a.active {
     border-radius: 15px;
     height: 180px;
     margin: auto;
-  }
-  .podologia {
-    width: 90%;
-    padding: 20px;
   }
   .slika-stop img {
     width: 350px;
@@ -594,6 +700,16 @@ header ul li a.active {
   }
 }
 @media (max-width: 500px) {
+  .page-wrapper {
+    margin-top: 100px;
+  }
+  .content {
+    width: 100%;
+    border-radius: 0;
+  }
+  .intro-text h1 {
+    font-size: 2.2rem;
+  }
   .post-slider .next {
     right: 5px;
   }
@@ -610,13 +726,41 @@ header ul li a.active {
     padding: 10px;
     border-radius: 20px;
   }
+  .stopL {
+    display: none;
+  }
+  .stopR {
+    display: none;
+  }
+  .stopL4 {
+    bottom: 20px;
+    right: 20px;
+    transform: rotate(210deg);
+  }
+  .stopR4 {
+    bottom: 10px;
+    right: 80px;
+    transform: rotate(210deg);
+  }
 }
 @media (max-width: 400px) {
   .cover img {
     height: 120px;
   }
+  .slika-stop img {
+    width: 290px;
+  }
+  .intro-text h1 {
+    font-size: 2rem;
+  }
 }
 @media (max-width: 350px) {
+  .slika-stop img {
+    width: 280px;
+  }
+  .intro-text h1 {
+    font-size: 1.9rem;
+  }
   .post-slider .next {
     right: 0px;
   }
@@ -625,5 +769,13 @@ header ul li a.active {
   }
   .cover img {
     height: 100px;
+  }
+}
+@media (max-width: 330px) {
+  .slika-stop img {
+    width: 250px;
+  }
+  .intro-text h1 {
+    font-size: 1.8rem;
   }
 }
