@@ -161,8 +161,8 @@ header ul li {
 }
 header ul li a {
   height: 130px;
-  line-height: 130px;
-  padding: 0 45px;
+  /* line-height: 130px; */
+  padding: 50px 45px;
   color: #fff;
   text-decoration: none;
   display: block;
@@ -440,7 +440,7 @@ main {
 /* medio queries */
 @media (max-width: 1400px) {
   header ul li a {
-    padding: 0 25px;
+    padding: 50px 25px;
     font-size: 1.2rem;
   }
 }
@@ -449,7 +449,7 @@ main {
     padding-top: 100px;
   }
   header ul li a {
-    padding: 0 15px;
+    padding: 50px 15px;
     font-size: 1.1rem;
   }
   .content {
