@@ -361,14 +361,19 @@ header ul li a.active {
 }
 .hero-text {
   color: #333;
-  padding: 30px 10px;
+  padding: 20px 10px;
   text-transform: uppercase;
   line-height: 1.3;
   font-size: 16px;
 }
 .hero-text h3 {
-  padding: 20px;
+  color: #047eb6;
+  padding: 2px;
+  margin: 10px;
   font-size: 2rem;
+}
+.hero-text h3:hover {
+  opacity: 0.9;
 }
 /* post slider */
 .post-slider {
@@ -515,6 +520,10 @@ header ul li a.active {
 }
 /* medio queries */
 @media (max-width: 1400px) {
+  header ul li a {
+    padding: 0 25px;
+    font-size: 1.2rem;
+  }
   .introduction {
     margin-top: 5vh;
     text-align: center;
@@ -540,7 +549,9 @@ header ul li a.active {
     font-size: 18px;
   }
   .hero-text h3 {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
+    padding: 2px;
+    margin: 10px;
   }
 }
 @media (max-width: 1354px) {
@@ -550,6 +561,10 @@ header ul li a.active {
   }
 }
 @media (max-width: 1024px) {
+  header ul li a {
+    padding: 0 15px;
+    font-size: 1.1rem;
+  }
   .introduction {
     margin-top: 5vh;
     text-align: center;
@@ -681,11 +696,10 @@ header ul li a.active {
     border-radius: 50px;
   }
   .hero-text h3 {
-    padding: 10px;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
   }
   .hero-text p {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
   .post-slider {
     height: auto;
@@ -780,6 +794,10 @@ header ul li a.active {
   .intro-text h1 {
     font-size: 2rem;
   }
+  header .nav ul li a {
+    height: 80px;
+    line-height: 80px;
+  }
 }
 @media (max-width: 350px) {
   .slika-stop img {
@@ -804,5 +822,9 @@ header ul li a.active {
   }
   .intro-text h1 {
     font-size: 1.8rem;
+  }
+  header .nav ul li a {
+    height: 70px;
+    line-height: 70px;
   }
 }

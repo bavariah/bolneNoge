@@ -438,9 +438,19 @@ main {
   padding-top: 20px;
 }
 /* medio queries */
+@media (max-width: 1400px) {
+  header ul li a {
+    padding: 0 25px;
+    font-size: 1.2rem;
+  }
+}
 @media (max-width: 1024px) {
   .page-wrapper {
     padding-top: 100px;
+  }
+  header ul li a {
+    padding: 0 15px;
+    font-size: 1.1rem;
   }
   .content {
     flex-direction: column;
@@ -620,6 +630,10 @@ main {
   .gallery-image img {
     width: 300px;
   }
+  header .nav ul li a {
+    height: 80px;
+    line-height: 80px;
+  }
 }
 @media (max-width: 350px) {
   header {
@@ -637,5 +651,9 @@ main {
   .fb-page {
     max-width: 320px;
     padding: 0px;
+  }
+  header .nav ul li a {
+    height: 70px;
+    line-height: 70px;
   }
 }
