@@ -15,6 +15,16 @@ body {
   scroll-behavior: smooth;
   cursor: url(../images/cursor.gif), pointer;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Roboto", sans-serif;
+  color: #047eb6;
+  margin: 5px;
+}
 /* ====== scroll ===== */
 /* width */
 ::-webkit-scrollbar {
@@ -39,11 +49,25 @@ body {
   );
 }
 /* ====== end scroll ===== */
-/* scroll btn ======== */
 a {
   text-decoration: none;
   color: inherit;
   cursor: pointer;
+}
+.btn {
+  padding: 0.5rem 1rem;
+  background: #047eb6;
+  color: white;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+}
+.btn-big {
+  padding: 0.7rem 1.3rem;
+  line-height: 1.3rem;
+}
+.btn:hover {
+  color: white !important;
+  background: #047eb6;
 }
 .text-input {
   padding: 0.7rem 1rem;
@@ -97,6 +121,7 @@ header .logo {
   justify-content: center;
   align-items: center;
 }
+
 header .logo img {
   height: 80px;
   max-width: 110px;
@@ -131,7 +156,6 @@ header ul li {
 }
 header ul li a {
   height: 110px;
-  /* line-height: 130px; */
   padding: 45px 45px;
   color: #fff;
   text-decoration: none;
@@ -147,7 +171,7 @@ header ul li ul {
   display: none;
 }
 
-header ul li.active ul {
+header nav ul li.active ul {
   /* use li: hover instead */
   display: block;
 }
@@ -156,16 +180,10 @@ header ul li ul li {
   display: block;
   width: 200px;
 }
-
 header ul li a:hover {
   color: #fff;
   background: #1067ad;
 }
-
-header ul li a.active {
-  background: #2196f3;
-}
-
 .menu-toggle {
   color: #fff;
   position: fixed;
@@ -177,260 +195,60 @@ header ul li a.active {
   cursor: pointer;
   display: none;
 }
-.aButton {
-  border: #1067ad solid 2px;
-  background-color: #1067ad;
-  letter-spacing: 1px;
-  font-weight: bold;
-  color: #ffffff;
-  border-radius: 20px;
-  font-size: 16px;
-  padding: 5px;
-  margin-left: 10px;
-  transition: all 0.3s linear;
-}
-.aButton:hover {
-  color: #1067ad;
-  background-color: #fff;
-}
+
 /* page wrapp*/
 .page-wrapper {
-  margin-top: 200px;
-  padding-bottom: 30px;
+  padding-top: 200px;
   min-height: 100%;
+  padding-bottom: 20px;
 }
-/* CONTENT */
+/* SINGLE PAGES */
 .content {
-  display: grid;
-  position: relative;
-  grid-template-columns: 1fr;
-  width: 80%;
-  margin: 50px auto;
-  padding: 40px 20px;
-  align-items: center;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 5px 5px 10px 3px #b3b3b3;
-  color: #333;
-}
-.stopL {
-  z-index: 2;
-  position: absolute;
-  bottom: 60px;
-  left: 200px;
-  transform: rotateZ(-30deg);
-}
-.stopR {
-  z-index: 2;
-  position: absolute;
-  bottom: 60px;
-  left: 250px;
-  transform: rotateZ(-30deg);
-}
-.stopL2 {
-  z-index: 2;
-  position: absolute;
-  top: 80px;
-  left: 120px;
-  transform: rotateZ(30deg);
-}
-.stopR2 {
-  z-index: 2;
-  position: absolute;
-  top: 80px;
-  left: 170px;
-  transform: rotateZ(30deg);
-}
-.stopL3 {
-  z-index: 2;
-  position: absolute;
-  bottom: 330px;
-  right: 260px;
-  transform: rotateZ(-30deg);
-}
-.stopR3 {
-  z-index: 2;
-  position: absolute;
-  bottom: 330px;
-  right: 200px;
-  transform: rotateZ(-30deg);
-}
-.stopL4 {
-  z-index: 2;
-  position: absolute;
-  bottom: 40px;
-  right: 40px;
-  transform: rotate(210deg);
-}
-.stopR4 {
-  z-index: 2;
-  position: absolute;
-  bottom: 30px;
-  right: 100px;
-  transform: rotate(210deg);
-}
-.introduction {
-  margin: auto;
-  max-width: 900px;
-}
-.cover {
-  max-width: 900px;
-  margin: auto;
-}
-.cover img {
-  border-radius: 15px;
-  height: 250px;
-  animation: drop 1.5s ease;
+  width: 70%;
   margin: 50px auto;
 }
-.intro-text {
-  animation: sliding 1.5s ease;
-  padding-right: 25px;
-}
-.intro-text h1 {
-  font-family: "Dancing Script", cursive;
-  color: #ffffff;
-  background: #2b9fec;
-  text-align: center;
-  border-radius: 30px;
-  font-size: 5rem;
-  font-weight: 500;
-}
-.intro-text p {
-  margin-top: 20px;
-  line-height: 1.4;
-  font-size: 24px;
-  text-align: center;
-}
-.intro-text span {
-  color: #d82415;
-}
-
-@keyframes sliding {
-  0% {
-    opacity: 0;
-    transform: translateY(-80px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0px);
-  }
-}
-@keyframes drop {
-  0% {
-    opacity: 0;
-    transform: translateY(80px) scale(0);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0px) scale(1);
-  }
-}
-/* podologia */
-.podologia {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  color: #333;
-  background-color: #fff;
-  text-align: center;
+.content .main-content.gala {
   width: 100%;
-  margin: 150px auto;
-  padding: 100px 20px;
-  box-shadow: 5px 5px 10px 3px #b3b3b3;
 }
-.podologia span {
-  transition: 0.2s ease-in-out;
-}
-.podologia:hover span {
-  color: #2b9fec;
-}
-.hero-space {
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-  width: 80%;
-  margin: auto;
-  align-items: center;
-}
-.slika-stop {
-  padding-right: 20px;
-}
-.slika-stop img {
-  width: 500px;
-  height: auto;
-  max-height: 320px;
-  border-radius: 50px;
-}
-.hero-text {
-  color: #333;
-  padding: 20px 10px;
-  text-transform: uppercase;
-  line-height: 1.3;
-  font-size: 16px;
-}
-.hero-text h3 {
-  color: #047eb6;
-  padding: 2px;
-  margin: 10px;
-  font-size: 2rem;
-}
-.hero-text h3:hover {
-  opacity: 0.9;
-}
-/* post slider */
-.post-slider {
-  position: relative;
-  height: 50vh;
-}
-.post-slider .slider-title {
-  text-align: center;
-  margin: 30px auto;
-  color: #1067ad;
-}
-.post-slider .next {
-  position: absolute;
-  top: 50%;
-  right: 25px;
-  font-size: 1.7em;
-  color: #1067ad;
-  cursor: pointer;
-}
-.post-slider .prev {
-  position: absolute;
-  top: 50%;
-  left: 25px;
-  font-size: 1.7em;
-  color: #1067ad;
-  cursor: pointer;
-}
-.post-info h4 {
-  color: #1067ad;
-}
-.post-slider .post-wrapper {
-  width: 84%;
-  height: 350px;
-  margin: 0px auto;
-  overflow: hidden;
-  padding: 10px 0px 10px 0px;
-}
-.post-slider .post-wrapper .post {
-  width: 300px;
-  height: 330px;
-  margin: 0px 10px;
-  display: inline-block;
+.content .main-content.single {
   background: white;
+  padding: 20px 50px;
+  font-size: 1.1em;
   border-radius: 5px;
-  box-shadow: 1rem 1rem 1rem -1rem #a0a0a033;
 }
-.post-slider .post-wrapper .post .post-info {
-  height: 130px;
-  padding: 0px 5px;
+.post-title {
+  text-align: center;
+  font-size: 4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  margin-bottom: 50px;
+  animation: showoff 1.8s linear;
 }
-.post-slider .post-wrapper .post .slider-image {
-  width: 100%;
-  height: 200px;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+.post-content {
+  font-size: 1.3rem;
+}
+@keyframes showoff {
+  0% {
+    transform: scale(0) rotateY(360deg);
+  }
+  70% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/*SINGLE SIDEBAR*/
+.sidebar .fb-page {
+  padding-left: 20px;
+  width: 380px;
+}
+.content .sidebar {
+  padding: 30px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 /* footer*/
 .footer {
@@ -526,64 +344,47 @@ header ul li a.active {
     padding: 50px 25px;
     font-size: 1.2rem;
   }
-  .aButton {
-    font-size: 14px;
-    font-weight: normal;
-  }
-  .introduction {
-    margin-top: 5vh;
-    text-align: center;
-  }
-  .stopL3 {
-    z-index: 2;
-    position: absolute;
-    bottom: 300px;
-    right: 170px;
-    transform: rotateZ(-30deg);
-  }
-  .stopR3 {
-    z-index: 2;
-    position: absolute;
-    bottom: 300px;
-    right: 120px;
-    transform: rotateZ(-30deg);
-  }
-  .intro-text h1 {
-    font-size: 3rem;
-  }
-  .intro-text p {
-    font-size: 18px;
-  }
-  .hero-text h3 {
-    font-size: 1.8rem;
-    padding: 2px;
-    margin: 10px;
-  }
-}
-@media (max-width: 1354px) {
-  .podologia {
-    grid-template-columns: 1fr;
-    padding: 50px 20px 50px;
-  }
 }
 @media (max-width: 1024px) {
+  .page-wrapper {
+    padding-top: 50px;
+    padding-bottom: 40px;
+  }
   header ul li a {
     padding: 50px 15px;
     font-size: 1.1rem;
   }
+  .content {
+    flex-direction: column;
+  }
+  .content .main-content.single {
+    padding-top: 50px;
+  }
+  .post-title {
+    padding-top: 30px;
+    letter-spacing: 0.4rem;
+  }
   .introduction {
     margin-top: 5vh;
     text-align: center;
   }
+  .intro-text h1 {
+    font-size: 1.8rem;
+  }
   .intro-text p {
     font-size: 18px;
-    line-height: 1.7;
+  }
+  .cover img {
+    animation: sliding 1.5s ease;
+  }
+  .intro-text {
+    animation: drop 1.5s ease;
+  }
+  .fb-page {
+    padding: 10px;
   }
   .resp-frame {
     width: 300px;
-  }
-  .aButton {
-    display: inline-block;
   }
 }
 @media (max-width: 860px) {
@@ -643,72 +444,15 @@ header ul li a.active {
     max-width: 100px;
     animation: rising 2.5s linear;
   }
-  .stopL {
-    z-index: 2;
-    position: absolute;
-    bottom: 60px;
-    left: 50px;
-    transform: rotateZ(-30deg);
-  }
-  .stopR {
-    z-index: 2;
-    position: absolute;
-    bottom: 60px;
-    left: 100px;
-    transform: rotateZ(-30deg);
-  }
-  .stopL2 {
-    display: none;
-  }
-  .stopR2 {
-    display: none;
-  }
-  .stopL3 {
-    display: none;
-  }
-  .stopR3 {
-    display: none;
-  }
-  .stopL4 {
-    bottom: 40px;
-    right: 40px;
-    transform: rotate(210deg);
-  }
-  .stopR4 {
-    bottom: 30px;
-    right: 100px;
-    transform: rotate(210deg);
-  }
   .content {
-    width: 90%;
-    gap: 50px;
+    width: 100%;
   }
-  .introduction {
-    margin: auto;
-    max-width: auto;
+  .content .main-content {
+    width: 100%;
   }
-  .cover {
-    max-width: 100%;
-  }
-  .cover img {
-    border-radius: 15px;
-    height: 180px;
-    margin: auto;
-  }
-  .slika-stop img {
-    width: 350px;
-    height: auto;
-    max-height: 320px;
-    border-radius: 50px;
-  }
-  .hero-text h3 {
-    font-size: 1.4rem;
-  }
-  .hero-text p {
-    font-size: 0.9rem;
-  }
-  .post-slider {
-    height: auto;
+  .content .sidebar {
+    width: 100%;
+    padding: 10px;
   }
   .footer {
     height: auto;
@@ -747,15 +491,18 @@ header ul li a.active {
   }
 }
 @media (max-width: 500px) {
-  .page-wrapper {
-    margin-top: 100px;
+  header {
+    padding: 0px 40px 0px 0px;
   }
-  .content {
+  .content .main-content.single {
     width: 100%;
-    border-radius: 0;
+    padding: 25px;
   }
-  .intro-text h1 {
+  .post-title {
+    padding-top: 20px;
     font-size: 2.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
   }
   .post-slider .next {
     right: 5px;
@@ -763,8 +510,8 @@ header ul li a.active {
   .post-slider .prev {
     left: 5px;
   }
-  .cover img {
-    height: 150px;
+  .intro-text h1 {
+    font-size: 1.5rem;
   }
   #topBtn {
     bottom: 20px;
@@ -773,44 +520,25 @@ header ul li a.active {
     padding: 10px;
     border-radius: 20px;
   }
-  .stopL {
-    display: none;
-  }
-  .stopR {
-    display: none;
-  }
-  .stopL4 {
-    bottom: 20px;
-    right: 20px;
-    transform: rotate(210deg);
-  }
-  .stopR4 {
-    bottom: 10px;
-    right: 80px;
-    transform: rotate(210deg);
-  }
-}
-@media (max-width: 400px) {
-  .cover img {
-    height: 120px;
-  }
-  .slika-stop img {
-    width: 290px;
-  }
-  .intro-text h1 {
-    font-size: 2rem;
-  }
   header .nav ul li a {
     height: 80px;
     line-height: 80px;
   }
 }
 @media (max-width: 350px) {
-  .slika-stop img {
-    width: 280px;
+  header {
+    padding: 0px 5px 0px 0px;
+  }
+  .post-title {
+    padding-top: 20px;
+    font-size: 2rem;
+    letter-spacing: 0.2rem;
   }
   .intro-text h1 {
-    font-size: 1.9rem;
+    font-size: 1.4rem;
+  }
+  .menu-toggle {
+    font-size: 30px;
   }
   .post-slider .next {
     right: 0px;
@@ -818,16 +546,14 @@ header ul li a.active {
   .post-slider .prev {
     left: 0px;
   }
-  .cover img {
-    height: 100px;
-  }
 }
 @media (max-width: 330px) {
-  .slika-stop img {
-    width: 250px;
-  }
-  .intro-text h1 {
+  .post-title {
     font-size: 1.8rem;
+    letter-spacing: 0.1rem;
+  }
+  .sidebar .fb-page {
+    display: none;
   }
   header .nav ul li a {
     height: 70px;
