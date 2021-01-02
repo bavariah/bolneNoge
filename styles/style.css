@@ -178,10 +178,10 @@ header ul li a.active {
   display: none;
 }
 .aButton {
-  border: #15d846 solid 2px;
-  background-color: #15d846;
+  border: #1067ad solid 2px;
+  background-color: #1067ad;
   font-weight: bold;
-  color: #222;
+  color: #ffffff;
   border-radius: 20px;
   font-size: 16px;
   padding: 5px;
@@ -189,7 +189,7 @@ header ul li a.active {
   transition: all 0.3s linear;
 }
 .aButton:hover {
-  color: #15d846;
+  color: #1067ad;
   background-color: #fff;
 }
 /* page wrapp*/
@@ -524,6 +524,10 @@ header ul li a.active {
   header ul li a {
     padding: 50px 25px;
     font-size: 1.2rem;
+  }
+  .aButton {
+    font-size: 14px;
+    font-weight: normal;
   }
   .introduction {
     margin-top: 5vh;
