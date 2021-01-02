@@ -80,7 +80,7 @@ a {
 }
 /* NAVBAR */
 header {
-  height: 130px;
+  height: 110px;
   z-index: 50;
   position: fixed;
   display: flex;
@@ -92,14 +92,14 @@ header {
 }
 header .logo {
   color: #fff;
-  height: 130px;
+  height: 110px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 header .logo img {
-  height: 100px;
-  max-width: 120px;
+  height: 80px;
+  max-width: 110px;
   width: 100%;
   border-radius: 30px;
   animation: rising 2s linear;
@@ -130,9 +130,9 @@ header ul li {
   margin-left: 20px;
 }
 header ul li a {
-  height: 130px;
+  height: 110px;
   /* line-height: 130px; */
-  padding: 50px 45px;
+  padding: 45px 45px;
   color: #fff;
   text-decoration: none;
   display: block;
@@ -178,17 +178,18 @@ header ul li a.active {
   display: none;
 }
 .aButton {
-  border: #d82415 solid 2px;
-  background-color: #d82415;
-  color: #fff;
+  border: #15d846 solid 2px;
+  background-color: #15d846;
+  font-weight: bold;
+  color: #222;
   border-radius: 20px;
-  font-size: 15px;
+  font-size: 16px;
   padding: 5px;
   margin-left: 10px;
   transition: all 0.3s linear;
 }
 .aButton:hover {
-  color: #d82415;
+  color: #15d846;
   background-color: #fff;
 }
 /* page wrapp*/
