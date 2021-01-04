@@ -349,7 +349,7 @@ header ul li a.active {
   flex-direction: column;
   padding: 10px;
   width: 80%;
-  margin: auto;
+  margin: 0 auto;
   align-items: center;
 }
 .slika-stop {
@@ -765,6 +765,17 @@ header ul li a.active {
   }
   .cover img {
     height: 150px;
+  }
+  .aButton {
+    display: block;
+    margin-top: 20px;
+    margin-left: 0;
+    line-height: 2;
+  }
+  .intro-text h1 {
+    color: #2b9fec;
+    background: transparent;
+    font-weight: 500;
   }
   #topBtn {
     bottom: 20px;

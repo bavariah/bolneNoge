@@ -25,6 +25,9 @@ h6 {
   color: #047eb6;
   margin: 5px;
 }
+ul {
+  list-style: none;
+}
 /* ====== scroll ===== */
 /* width */
 ::-webkit-scrollbar {
@@ -238,6 +241,83 @@ header ul li a:hover {
     transform: scale(1);
   }
 }
+.post-content .single-content {
+  display: grid;
+  min-height: 300px;
+  grid-template-columns: 1fr 1fr;
+  padding: 20px;
+  margin: 50px 10px;
+  justify-content: center;
+  align-items: center;
+}
+.post-content .single-content.left {
+  border-left: #047eb6 5px solid;
+}
+.post-content .single-content.right {
+  border-right: #047eb6 5px solid;
+}
+.post-content .single-content span {
+  color: #1e7ab8;
+}
+.single-content .col {
+  margin: auto;
+  position: relative;
+}
+.single-content li {
+  padding: 5px;
+  text-align: center;
+}
+/* FLIP CARD */
+.post-content .single-content .flip-card {
+  background-color: transparent;
+  width: 350px;
+  height: 230px;
+  perspective: 1000px;
+}
+.post-content .single-content .flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.post-content .single-content .flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.post-content .single-content .flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.post-content .single-content .grid-img.flip-card {
+  position: relative;
+  margin: auto;
+}
+.post-content .single-content .grid-img .flip-card-inner .flip-card-front img {
+  width: 100%;
+  width: 350px;
+  max-height: 250px;
+}
+.post-content .single-content .flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+.post-content .single-content .flip-card-back {
+  color: white;
+  transform: rotateY(180deg);
+}
+.post-content .single-content .flip-card-back img {
+  width: 350px;
+  max-height: 250px;
+}
+/* end flip card */
 /*SINGLE SIDEBAR*/
 .sidebar .fb-page {
   padding-left: 20px;
@@ -344,6 +424,14 @@ header ul li a:hover {
     padding: 50px 25px;
     font-size: 1.2rem;
   }
+  .content {
+    width: 85%;
+  }
+}
+@media (max-width: 1200px) {
+  .content {
+    width: 90%;
+  }
 }
 @media (max-width: 1024px) {
   .page-wrapper {
@@ -359,6 +447,44 @@ header ul li a:hover {
   }
   .content .main-content.single {
     padding-top: 50px;
+  }
+  .post-content .single-content {
+    display: grid;
+    min-height: 300px;
+    grid-template-columns: 1fr;
+    padding: 15px;
+    margin: 30px 10px;
+    row-gap: 50px;
+  }
+  .post-content .single-content .flip-card {
+    background-color: transparent;
+    width: 320px;
+    height: 200px;
+  }
+  .post-content
+    .single-content
+    .grid-img
+    .flip-card-inner
+    .flip-card-front
+    img {
+    width: 320px;
+    max-height: 220px;
+  }
+  .post-content .single-content .flip-card-back img {
+    width: 320px;
+    max-height: 220px;
+  }
+  .single-content .col {
+    margin: 0;
+  }
+  .single-content:nth-child(even) .col:last-child {
+    order: -1;
+  }
+  .post-content .single-content.right {
+    border: none;
+  }
+  .post-content .single-content.left {
+    border: none;
   }
   .post-title {
     padding-top: 30px;
