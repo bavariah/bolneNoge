@@ -98,10 +98,11 @@ header .logo {
   align-items: center;
 }
 header .logo img {
-  height: 80px;
+  height: 100px;
   max-width: 110px;
   width: 100%;
   border-radius: 30px;
+  margin-top: 5px;
   animation: rising 2s linear;
 }
 @keyframes rising {
@@ -639,7 +640,7 @@ header ul li a.active {
     align-items: center;
   }
   header .logo img {
-    height: 80px;
+    height: 90px;
     max-width: 100px;
     animation: rising 2.5s linear;
   }
