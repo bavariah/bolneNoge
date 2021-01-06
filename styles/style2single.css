@@ -25,6 +25,9 @@ h6 {
   color: #047eb6;
   margin: 5px;
 }
+ul {
+  list-style: none;
+}
 /* ====== scroll ===== */
 /* width */
 ::-webkit-scrollbar {
@@ -226,8 +229,40 @@ header ul li a:hover {
   text-shadow: 5px 5px 1px #047eb667;
   animation: showoff 1.5s linear;
 }
+.post-title-two {
+  text-align: center;
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  margin: 50px 0;
+  padding: 30px;
+  border-top: #047eb6 solid 5px;
+  text-shadow: 5px 5px 1px #047eb667;
+}
+.fizio-list {
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.post-content li {
+  padding: 5px;
+  margin: 5px;
+  color: #fff;
+  text-transform: capitalize;
+  border-radius: 5px;
+  background: rgb(4, 126, 182);
+  background: linear-gradient(
+    90deg,
+    rgba(4, 126, 182, 1) 66%,
+    rgba(4, 126, 182, 0.31976540616246496) 100%
+  );
+}
 .post-content {
   font-size: 1.3rem;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+.post-content span {
+  color: #047eb6;
 }
 @keyframes showoff {
   0% {
