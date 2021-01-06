@@ -387,6 +387,9 @@ header ul li a.active {
   text-align: center;
   margin: 30px auto;
   color: #1067ad;
+  font-size: 2.5rem;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
 }
 .post-slider .next {
   position: absolute;
@@ -406,6 +409,11 @@ header ul li a.active {
 }
 .post-info h4 {
   color: #1067ad;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+.post-info i {
+  display: block;
 }
 .post-slider .post-wrapper {
   width: 84%;
@@ -425,7 +433,7 @@ header ul li a.active {
 }
 .post-slider .post-wrapper .post .post-info {
   height: 130px;
-  padding: 0px 5px;
+  padding: 10px;
 }
 .post-slider .post-wrapper .post .slider-image {
   width: 100%;
