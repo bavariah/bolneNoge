@@ -682,7 +682,7 @@ header ul li a.active {
   }
   .content {
     width: 90%;
-    gap: 50px;
+    gap: 30px;
   }
   .introduction {
     margin: auto;
@@ -749,14 +749,13 @@ header ul li a.active {
 }
 @media (max-width: 500px) {
   .page-wrapper {
-    margin-top: 100px;
+    margin-top: 0;
   }
   .content {
     width: 100%;
+    height: calc(100vh - 100px);
+    margin-top: 100px;
     border-radius: 0;
-  }
-  .intro-text h1 {
-    font-size: 2.2rem;
   }
   .post-slider .next {
     right: 5px;
@@ -773,7 +772,11 @@ header ul li a.active {
     margin-left: 0;
     line-height: 2;
   }
+  .intro-text {
+    padding-right: 0;
+  }
   .intro-text h1 {
+    font-size: 2.2rem;
     color: #2b9fec;
     background: transparent;
     font-weight: 500;
