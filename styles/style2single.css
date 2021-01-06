@@ -548,6 +548,12 @@ header ul li a:hover {
     text-transform: uppercase;
     letter-spacing: 0.3rem;
   }
+  .post-title-two {
+    font-size: 2rem;
+  }
+  .post-content li {
+    background: rgb(4, 126, 182);
+  }
   .post-slider .next {
     right: 5px;
   }
@@ -578,6 +584,9 @@ header ul li a:hover {
     font-size: 2rem;
     letter-spacing: 0.2rem;
   }
+  .post-title-two {
+    font-size: 1.8rem;
+  }
   .intro-text h1 {
     font-size: 1.4rem;
   }
@@ -595,6 +604,9 @@ header ul li a:hover {
   .post-title {
     font-size: 1.8rem;
     letter-spacing: 0.1rem;
+  }
+  .post-title-two {
+    font-size: 1.6rem;
   }
   .sidebar .fb-page {
     display: none;

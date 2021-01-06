@@ -812,6 +812,11 @@ header ul li a.active {
     right: 80px;
     transform: rotate(210deg);
   }
+  .post-slider .slider-title {
+    color: #1067ad;
+    font-size: 2rem;
+    letter-spacing: 0.2rem;
+  }
 }
 @media (max-width: 400px) {
   .cover img {
